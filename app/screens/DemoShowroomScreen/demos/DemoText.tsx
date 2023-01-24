@@ -93,7 +93,7 @@ export const DemoText: Demo = {
 
       <Text>
         <Text text="via `tx` prop - " />
-        <Text text="demoShowroomScreen.lorem2Sentences" />
+        <Text text="Nulla cupidatat deserunt amet quis aliquip nostrud do adipisicing. Adipisicing excepteur elit laborum Lorem adipisicing do duis." />
       </Text>
 
       <DemoDivider />

@@ -30,7 +30,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
   }
 
   useHeader({
-    rightTx: "common.logOut",
+    rightText: "Log Out",
     onRightPress: logout,
   })
   // @demo remove-block-end
@@ -44,22 +44,20 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
         <Text
           testID="welcome-heading"
           style={$welcomeHeading}
-          text="welcomeScreen.readyForLaunch"
+          text="Your app, almost ready for launch!"
           preset="heading"
         />
-        <Text text="welcomeScreen.exciting" preset="subheading" />
+        <Text text="(ohh, this is exciting!)" preset="subheading" />
         <Image style={$welcomeFace} source={welcomeFace} resizeMode="contain" />
       </View>
 
       <View style={[$bottomContainer, $bottomContainerInsets]}>
-        <Text text="welcomeScreen.postscript" size="md" />
-        {/* @demo remove-block-start */}
-        <Button
-          testID="next-screen-button"
-          preset="reversed"
-          text="welcomeScreen.letsGo"
-          onPress={goNext}
+        <Text
+          text="psst  — This probably isn't what your app looks like. (Unless your designer handed you these screens, and in that case, ship it!)"
+          size="md"
         />
+        {/* @demo remove-block-start */}
+        <Button testID="next-screen-button" preset="reversed" text="Let's go!" onPress={goNext} />
         {/* @demo remove-block-end */}
       </View>
     </View>

@@ -78,14 +78,10 @@ export const DemoPodcastListScreen: FC<DemoTabScreenProps<"DemoPodcastList">> = 
               <EmptyState
                 preset="generic"
                 style={$emptyState}
-                heading={
-                  episodeStore.favoritesOnly
-                    ? "demoPodcastListScreen.noFavoritesEmptyState.heading"
-                    : ""
-                }
+                heading={episodeStore.favoritesOnly ? "This looks a bit empty" : ""}
                 context={
                   episodeStore.favoritesOnly
-                    ? "demoPodcastListScreen.noFavoritesEmptyState.content"
+                    ? "No favorites have been added yet. Tap the heart on an episode to add it to your favorites!"
                     : undefined
                 }
                 button={episodeStore.favoritesOnly ? null : undefined}
@@ -97,7 +93,7 @@ export const DemoPodcastListScreen: FC<DemoTabScreenProps<"DemoPodcastList">> = 
           }
           ListHeaderComponent={
             <View style={$heading}>
-              <Text preset="heading" text="demoPodcastListScreen.title" />
+              <Text preset="heading" text="React Native Radio episodes" />
               {(episodeStore.favoritesOnly || episodeStore.episodesForList.length > 0) && (
                 <View style={$toggle}>
                   <Toggle
@@ -106,10 +102,10 @@ export const DemoPodcastListScreen: FC<DemoTabScreenProps<"DemoPodcastList">> = 
                       episodeStore.setProp("favoritesOnly", !episodeStore.favoritesOnly)
                     }
                     variant="switch"
-                    label="demoPodcastListScreen.onlyFavorites"
+                    label="Only Show Favorites"
                     labelPosition="left"
                     labelStyle={$labelStyle}
-                    accessibilityLabel={"demoPodcastListScreen.accessibility.switch"}
+                    accessibilityLabel="Switch on to only show favorites"
                   />
                 </View>
               )}
@@ -185,7 +181,7 @@ const EpisodeCard = observer(function EpisodeCard({
           accessibilityActions: [
             {
               name: "longpress",
-              label: "demoPodcastListScreen.accessibility.favoriteAction",
+              label: "Toggle Favorite",
             },
           ],
           onAccessibilityAction: ({ nativeEvent }) => {
@@ -266,22 +262,14 @@ const EpisodeCard = observer(function EpisodeCard({
           onPress={handlePressFavorite}
           onLongPress={handlePressFavorite}
           style={[$favoriteButton, isFavorite && $unFavoriteButton]}
-          accessibilityLabel={
-            isFavorite
-              ? "demoPodcastListScreen.accessibility.unfavoriteIcon"
-              : "demoPodcastListScreen.accessibility.favoriteIcon"
-          }
+          accessibilityLabel={isFavorite ? "Episode favorited" : "Episode not favorited"}
           LeftAccessory={ButtonLeftAccessory}
         >
           <Text
             size="xxs"
             accessibilityLabel={episode.duration.accessibilityLabel}
             weight="medium"
-            text={
-              isFavorite
-                ? "demoPodcastListScreen.unfavoriteButton"
-                : "demoPodcastListScreen.favoriteButton"
-            }
+            text={isFavorite ? "Unfavorite" : "Favorite"}
           />
         </Button>
       }

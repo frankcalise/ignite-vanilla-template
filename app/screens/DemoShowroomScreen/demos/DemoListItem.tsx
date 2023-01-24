@@ -131,7 +131,7 @@ export const DemoListItem: Demo = {
       description="There are a few different ways to pass content."
     >
       <ListItem topSeparator text="Via `text` prop - reprehenderit sint" />
-      <ListItem topSeparator text="demoShowroomScreen.demoViaTxProp" />
+      <ListItem topSeparator text="Via `tx` Prop" />
       <ListItem topSeparator>Children - mostrud mollit</ListItem>
       <ListItem topSeparator bottomSeparator>
         <Text>

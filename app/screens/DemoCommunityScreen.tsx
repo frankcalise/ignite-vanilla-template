@@ -14,38 +14,42 @@ export const DemoCommunityScreen: FC<DemoTabScreenProps<"DemoCommunity">> =
   function DemoCommunityScreen(_props) {
     return (
       <Screen preset="scroll" contentContainerStyle={$container} safeAreaEdges={["top"]}>
-        <Text preset="heading" text="demoCommunityScreen.title" style={$title} />
-        <Text text="demoCommunityScreen.tagLine" style={$tagline} />
+        <Text preset="heading" text="Connect with the community" style={$title} />
+        <Text
+          text="Plug in to Infinite Red's community of React Native engineers and level up your app development with us!"
+          style={$tagline}
+        />
 
-        <Text preset="subheading" text="demoCommunityScreen.joinUsOnSlackTitle" />
-        <Text text="demoCommunityScreen.joinUsOnSlack" style={$description} />
+        <Text preset="subheading" text="Join us on Slack" />
+        <Text
+          text="Wish there was a place to connect with React Native engineers around the world? Join the conversation in the Infinite Red Community Slack! Our growing community is a safe space to ask questions, learn from others, and grow your network."
+          style={$description}
+        />
         <ListItem
-          text="demoCommunityScreen.joinSlackLink"
+          text="Join the Slack Community"
           leftIcon="slack"
           rightIcon="caretRight"
           onPress={() => openLinkInBrowser("https://community.infinite.red/")}
         />
+        <Text preset="subheading" text="Make Ignite even better" style={$sectionTitle} />
         <Text
-          preset="subheading"
-          text="demoCommunityScreen.makeIgniteEvenBetterTitle"
-          style={$sectionTitle}
+          text="Have an idea to make Ignite even better? We're happy to hear that! We're always looking for others who want to help us build the best React Native tooling out there. Join us over on GitHub to join us in building the future of Ignite."
+          style={$description}
         />
-        <Text text="demoCommunityScreen.makeIgniteEvenBetter" style={$description} />
         <ListItem
-          text="demoCommunityScreen.contributeToIgniteLink"
+          text="Contribute to Ignite"
           leftIcon="github"
           rightIcon="caretRight"
           onPress={() => openLinkInBrowser("https://github.com/infinitered/ignite")}
         />
 
+        <Text preset="subheading" text="The latest in React Native" style={$sectionTitle} />
         <Text
-          preset="subheading"
-          text="demoCommunityScreen.theLatestInReactNativeTitle"
-          style={$sectionTitle}
+          text="We're here to keep you current on all React Native has to offer."
+          style={$description}
         />
-        <Text text="demoCommunityScreen.theLatestInReactNative" style={$description} />
         <ListItem
-          text="demoCommunityScreen.reactNativeRadioLink"
+          text="React Native Radio"
           bottomSeparator
           rightIcon="caretRight"
           LeftComponent={
@@ -56,7 +60,7 @@ export const DemoCommunityScreen: FC<DemoTabScreenProps<"DemoCommunity">> =
           onPress={() => openLinkInBrowser("https://reactnativeradio.com/")}
         />
         <ListItem
-          text="demoCommunityScreen.reactNativeNewsletterLink"
+          text="React Native Newsletter"
           bottomSeparator
           rightIcon="caretRight"
           LeftComponent={
@@ -67,7 +71,7 @@ export const DemoCommunityScreen: FC<DemoTabScreenProps<"DemoCommunity">> =
           onPress={() => openLinkInBrowser("https://reactnativenewsletter.com/")}
         />
         <ListItem
-          text="demoCommunityScreen.reactNativeLiveLink"
+          text="React Native Live"
           bottomSeparator
           rightIcon="caretRight"
           LeftComponent={
@@ -78,7 +82,7 @@ export const DemoCommunityScreen: FC<DemoTabScreenProps<"DemoCommunity">> =
           onPress={() => openLinkInBrowser("https://rn.live/")}
         />
         <ListItem
-          text="demoCommunityScreen.chainReactConferenceLink"
+          text="Chain React Conference"
           rightIcon="caretRight"
           LeftComponent={
             <View style={$logoContainer}>
@@ -87,10 +91,17 @@ export const DemoCommunityScreen: FC<DemoTabScreenProps<"DemoCommunity">> =
           }
           onPress={() => openLinkInBrowser("https://cr.infinite.red/")}
         />
-        <Text preset="subheading" text="demoCommunityScreen.hireUsTitle" style={$sectionTitle} />
-        <Text text="demoCommunityScreen.hireUs" style={$description} />
+        <Text
+          preset="subheading"
+          text="Hire Infinite Red for your next project"
+          style={$sectionTitle}
+        />
+        <Text
+          text="Whether it's running a full project or getting teams up to speed with our hands-on training, Infinite Red can help with just about any React Native project."
+          style={$description}
+        />
         <ListItem
-          text="demoCommunityScreen.hireUsLink"
+          text="Send us a message"
           leftIcon="clap"
           rightIcon="caretRight"
           onPress={() => openLinkInBrowser("https://infinite.red/contact")}

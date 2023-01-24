@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import { Linking, Platform, TextStyle, View, ViewStyle } from "react-native"
+import { Linking, TextStyle, View, ViewStyle } from "react-native"
 import { Button, ListItem, Screen, Text } from "../components"
 import { DemoTabScreenProps } from "../navigators/DemoNavigator"
 import { colors, spacing } from "../theme"
@@ -39,7 +39,7 @@ export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function Dem
     <Screen preset="scroll" safeAreaEdges={["top"]} contentContainerStyle={$container}>
       <Text
         style={$reportBugsLink}
-        text="demoDebugScreen.reportBugs"
+        text="Report Bugs"
         onPress={() => openLinkInBrowser("https://github.com/infinitered/ignite/issues")}
       />
       <Text style={$title} preset="heading" />
@@ -86,11 +86,11 @@ export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function Dem
         />
       </View>
       <View style={$buttonContainer}>
-        <Button style={$button} text="demoDebugScreen.reactotron" onPress={demoReactotron} />
+        <Button style={$button} text="Send to Reactotron" onPress={demoReactotron} />
         <Text style={$hint} />
       </View>
       <View style={$buttonContainer}>
-        <Button style={$button} text="common.logOut" onPress={logout} />
+        <Button style={$button} text="Log Out" onPress={logout} />
       </View>
     </Screen>
   )

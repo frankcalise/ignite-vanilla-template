@@ -47,7 +47,7 @@ export function DemoNavigator() {
         name="DemoShowroom"
         component={DemoShowroomScreen}
         options={{
-          tabBarLabel: "demoNavigator.componentsTab",
+          tabBarLabel: "Components",
           tabBarIcon: ({ focused }) => <Icon icon="components" color={focused && colors.tint} />,
         }}
       />
@@ -56,7 +56,7 @@ export function DemoNavigator() {
         name="DemoCommunity"
         component={DemoCommunityScreen}
         options={{
-          tabBarLabel: "demoNavigator.communityTab",
+          tabBarLabel: "Community",
           tabBarIcon: ({ focused }) => <Icon icon="community" color={focused && colors.tint} />,
         }}
       />
@@ -65,7 +65,7 @@ export function DemoNavigator() {
         name="DemoPodcastList"
         component={DemoPodcastListScreen}
         options={{
-          tabBarLabel: "demoNavigator.podcastListTab",
+          tabBarLabel: "Podcast",
           tabBarIcon: ({ focused }) => <Icon icon="podcast" color={focused && colors.tint} />,
         }}
       />
@@ -74,7 +74,7 @@ export function DemoNavigator() {
         name="DemoDebug"
         component={DemoDebugScreen}
         options={{
-          tabBarLabel: "demoNavigator.debugTab",
+          tabBarLabel: "Debug",
           tabBarIcon: ({ focused }) => <Icon icon="debug" color={focused && colors.tint} />,
         }}
       />

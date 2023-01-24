@@ -50,11 +50,7 @@ export const DemoHeader: Demo = {
       name="Action Text"
       description="You can easily pass in text to the left or right action components."
     >
-      <Header
-        title="Via `leftTx`"
-        leftText="demoShowroomScreen.demoHeaderTxExample"
-        safeAreaEdges={[]}
-      />
+      <Header title="Via `leftTx`" leftText="Yay" safeAreaEdges={[]} />
       <DemoDivider size={24} />
       <Header title="Via `rightText`" rightText="Yay" safeAreaEdges={[]} />
     </DemoUseCase>,

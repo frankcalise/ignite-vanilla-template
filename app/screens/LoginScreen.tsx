@@ -77,9 +77,20 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
       contentContainerStyle={$screenContentContainer}
       safeAreaEdges={["top", "bottom"]}
     >
-      <Text testID="login-heading" text="loginScreen.signIn" preset="heading" style={$signIn} />
-      <Text text="loginScreen.enterDetails" preset="subheading" style={$enterDetails} />
-      {attemptsCount > 2 && <Text text="loginScreen.hint" size="sm" weight="light" style={$hint} />}
+      <Text testID="login-heading" text="Sign In" preset="heading" style={$signIn} />
+      <Text
+        text="Enter your details below to unlock top secret info. You'll never guess what we've got waiting. Or maybe you will; it's not rocket science here."
+        preset="subheading"
+        style={$enterDetails}
+      />
+      {attemptsCount > 2 && (
+        <Text
+          text="Hint: you can use any email address and your favorite password :)"
+          size="sm"
+          weight="light"
+          style={$hint}
+        />
+      )}
 
       <TextField
         value={authEmail}
@@ -89,8 +100,8 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
         autoComplete="email"
         autoCorrect={false}
         keyboardType="email-address"
-        label="loginScreen.emailFieldLabel"
-        placeholder="loginScreen.emailFieldPlaceholder"
+        label="Email"
+        placeholder="Enter your email address"
         helper={errors?.authEmail}
         status={errors?.authEmail ? "error" : undefined}
         onSubmitEditing={() => authPasswordInput.current?.focus()}
@@ -105,8 +116,8 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
         autoComplete="password"
         autoCorrect={false}
         secureTextEntry={isAuthPasswordHidden}
-        label="loginScreen.passwordFieldLabel"
-        placeholder="loginScreen.passwordFieldPlaceholder"
+        label="Password"
+        placeholder="Super secret password here"
         helper={errors?.authPassword}
         status={errors?.authPassword ? "error" : undefined}
         onSubmitEditing={login}
@@ -115,7 +126,7 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
 
       <Button
         testID="login-button"
-        text="loginScreen.tapToSignIn"
+        text="Tap to sign in!"
         style={$tapButton}
         preset="reversed"
         onPress={login}
