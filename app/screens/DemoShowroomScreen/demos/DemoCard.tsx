@@ -72,12 +72,9 @@ export const DemoCard: Demo = {
       <DemoDivider />
       <Card
         preset="reversed"
-        headingTx="demoShowroomScreen.demoViaSpecifiedTxProp"
-        headingTxOptions={{ prop: "heading" }}
-        contentTx="demoShowroomScreen.demoViaSpecifiedTxProp"
-        contentTxOptions={{ prop: "content" }}
-        footerTx="demoShowroomScreen.demoViaSpecifiedTxProp"
-        footerTxOptions={{ prop: "footer" }}
+        heading="demoShowroomScreen.demoViaSpecifiedTxProp"
+        content="demoShowroomScreen.demoViaSpecifiedTxProp"
+        footer="demoShowroomScreen.demoViaSpecifiedTxProp"
       />
     </DemoUseCase>,
 

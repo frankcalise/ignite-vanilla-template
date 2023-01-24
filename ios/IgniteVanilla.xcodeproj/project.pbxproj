@@ -12,8 +12,13 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		37F79F749CF8403DAC8F2CD2 /* SpaceGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3941315972104D27910CD8B5 /* SpaceGrotesk-Regular.ttf */; };
+		711FF03A99DE460CBC35E5C9 /* SpaceGrotesk-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7D73A18BC8D423DB7E9A429 /* SpaceGrotesk-Medium.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-IgniteVanilla-IgniteVanillaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-IgniteVanilla-IgniteVanillaTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9405A583C899474C97452F75 /* SpaceGrotesk-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0DA9B01F59947D980CB3A14 /* SpaceGrotesk-SemiBold.ttf */; };
+		CCEE5ADF0006464AB1E402D3 /* SpaceGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B3F8CE33FAA4FF5963F877D /* SpaceGrotesk-Bold.ttf */; };
+		E7543DE6A20F4AFD909B18A6 /* SpaceGrotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64B4300B500A40A28F899DD1 /* SpaceGrotesk-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +42,17 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = IgniteVanilla/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = IgniteVanilla/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-IgniteVanilla-IgniteVanillaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IgniteVanilla-IgniteVanillaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3941315972104D27910CD8B5 /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Regular.ttf"; path = "../assets/fonts/SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-IgniteVanilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteVanilla.debug.xcconfig"; path = "Target Support Files/Pods-IgniteVanilla/Pods-IgniteVanilla.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-IgniteVanilla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteVanilla.release.xcconfig"; path = "Target Support Files/Pods-IgniteVanilla/Pods-IgniteVanilla.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-IgniteVanilla-IgniteVanillaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteVanilla-IgniteVanillaTests.debug.xcconfig"; path = "Target Support Files/Pods-IgniteVanilla-IgniteVanillaTests/Pods-IgniteVanilla-IgniteVanillaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-IgniteVanilla.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IgniteVanilla.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64B4300B500A40A28F899DD1 /* SpaceGrotesk-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Light.ttf"; path = "../assets/fonts/SpaceGrotesk-Light.ttf"; sourceTree = "<group>"; };
+		6B3F8CE33FAA4FF5963F877D /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Bold.ttf"; path = "../assets/fonts/SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = IgniteVanilla/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-IgniteVanilla-IgniteVanillaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteVanilla-IgniteVanillaTests.release.xcconfig"; path = "Target Support Files/Pods-IgniteVanilla-IgniteVanillaTests/Pods-IgniteVanilla-IgniteVanillaTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0DA9B01F59947D980CB3A14 /* SpaceGrotesk-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-SemiBold.ttf"; path = "../assets/fonts/SpaceGrotesk-SemiBold.ttf"; sourceTree = "<group>"; };
+		E7D73A18BC8D423DB7E9A429 /* SpaceGrotesk-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpaceGrotesk-Medium.ttf"; path = "../assets/fonts/SpaceGrotesk-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -122,6 +132,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				D67624867C3042F4AB6A0173 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -146,6 +157,19 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-IgniteVanilla-IgniteVanillaTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D67624867C3042F4AB6A0173 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B3F8CE33FAA4FF5963F877D /* SpaceGrotesk-Bold.ttf */,
+				64B4300B500A40A28F899DD1 /* SpaceGrotesk-Light.ttf */,
+				E7D73A18BC8D423DB7E9A429 /* SpaceGrotesk-Medium.ttf */,
+				3941315972104D27910CD8B5 /* SpaceGrotesk-Regular.ttf */,
+				E0DA9B01F59947D980CB3A14 /* SpaceGrotesk-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +268,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CCEE5ADF0006464AB1E402D3 /* SpaceGrotesk-Bold.ttf in Resources */,
+				E7543DE6A20F4AFD909B18A6 /* SpaceGrotesk-Light.ttf in Resources */,
+				711FF03A99DE460CBC35E5C9 /* SpaceGrotesk-Medium.ttf in Resources */,
+				37F79F749CF8403DAC8F2CD2 /* SpaceGrotesk-Regular.ttf in Resources */,
+				9405A583C899474C97452F75 /* SpaceGrotesk-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

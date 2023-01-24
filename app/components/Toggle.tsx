@@ -227,14 +227,7 @@ export function Toggle(props: ToggleProps) {
       </View>
 
       {!!(helper || helperTx) && (
-        <Text
-          preset="formHelper"
-          text={helper}
-          tx={helperTx}
-          txOptions={helperTxOptions}
-          {...HelperTextProps}
-          style={$helperStyles}
-        />
+        <Text preset="formHelper" text={helper} {...HelperTextProps} style={$helperStyles} />
       )}
     </Wrapper>
   )
@@ -537,7 +530,6 @@ function FieldLabel(props: BaseToggleProps) {
     <Text
       preset="formLabel"
       text={label}
-      tx={labelTx}
       txOptions={labelTxOptions}
       {...LabelTextProps}
       style={$labelStyle}

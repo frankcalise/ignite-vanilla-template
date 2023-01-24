@@ -8,7 +8,6 @@ import {
   View,
   ViewStyle,
 } from "react-native"
-import { isRTL, translate } from "../i18n"
 import { colors, spacing, typography } from "../theme"
 import { Text, TextProps } from "./Text"
 
@@ -29,15 +28,6 @@ export interface TextFieldProps extends Omit<TextInputProps, "ref"> {
    */
   label?: TextProps["text"]
   /**
-   * Label text which is looked up via i18n.
-   */
-  labelTx?: TextProps["tx"]
-  /**
-   * Optional label options to pass to i18n. Useful for interpolation
-   * as well as explicitly setting locale or translation fallbacks.
-   */
-  labelTxOptions?: TextProps["txOptions"]
-  /**
    * Pass any additional props directly to the label Text component.
    */
   LabelTextProps?: TextProps
@@ -46,15 +36,6 @@ export interface TextFieldProps extends Omit<TextInputProps, "ref"> {
    */
   helper?: TextProps["text"]
   /**
-   * Helper text which is looked up via i18n.
-   */
-  helperTx?: TextProps["tx"]
-  /**
-   * Optional helper options to pass to i18n. Useful for interpolation
-   * as well as explicitly setting locale or translation fallbacks.
-   */
-  helperTxOptions?: TextProps["txOptions"]
-  /**
    * Pass any additional props directly to the helper Text component.
    */
   HelperTextProps?: TextProps
@@ -62,15 +43,6 @@ export interface TextFieldProps extends Omit<TextInputProps, "ref"> {
    * The placeholder text to display if not using `placeholderTx`.
    */
   placeholder?: TextProps["text"]
-  /**
-   * Placeholder text which is looked up via i18n.
-   */
-  placeholderTx?: TextProps["tx"]
-  /**
-   * Optional placeholder options to pass to i18n. Useful for interpolation
-   * as well as explicitly setting locale or translation fallbacks.
-   */
-  placeholderTxOptions?: TextProps["txOptions"]
   /**
    * Optional input style override.
    */
@@ -104,15 +76,9 @@ export interface TextFieldProps extends Omit<TextInputProps, "ref"> {
  */
 export const TextField = forwardRef(function TextField(props: TextFieldProps, ref: Ref<TextInput>) {
   const {
-    labelTx,
     label,
-    labelTxOptions,
-    placeholderTx,
     placeholder,
-    placeholderTxOptions,
     helper,
-    helperTx,
-    helperTxOptions,
     status,
     RightAccessory,
     LeftAccessory,
@@ -127,9 +93,7 @@ export const TextField = forwardRef(function TextField(props: TextFieldProps, re
 
   const disabled = TextInputProps.editable === false || status === "disabled"
 
-  const placeholderContent = placeholderTx
-    ? translate(placeholderTx, placeholderTxOptions)
-    : placeholder
+  const placeholderContent = placeholder
 
   const $containerStyles = [$containerStyleOverride]
 
@@ -147,7 +111,6 @@ export const TextField = forwardRef(function TextField(props: TextFieldProps, re
   const $inputStyles = [
     $inputStyle,
     disabled && { color: colors.textDim },
-    isRTL && { textAlign: "right" as TextStyle["textAlign"] },
     TextInputProps.multiline && { height: "auto" },
     $inputStyleOverride,
   ]
@@ -173,16 +136,7 @@ export const TextField = forwardRef(function TextField(props: TextFieldProps, re
       onPress={focusInput}
       accessibilityState={{ disabled }}
     >
-      {!!(label || labelTx) && (
-        <Text
-          preset="formLabel"
-          text={label}
-          tx={labelTx}
-          txOptions={labelTxOptions}
-          {...LabelTextProps}
-          style={$labelStyles}
-        />
-      )}
+      {!!label && <Text preset="formLabel" text={label} {...LabelTextProps} style={$labelStyles} />}
 
       <View style={$inputWrapperStyles}>
         {!!LeftAccessory && (
@@ -215,15 +169,8 @@ export const TextField = forwardRef(function TextField(props: TextFieldProps, re
         )}
       </View>
 
-      {!!(helper || helperTx) && (
-        <Text
-          preset="formHelper"
-          text={helper}
-          tx={helperTx}
-          txOptions={helperTxOptions}
-          {...HelperTextProps}
-          style={$helperStyles}
-        />
+      {!!helper && (
+        <Text preset="formHelper" text={helper} {...HelperTextProps} style={$helperStyles} />
       )}
     </TouchableOpacity>
   )

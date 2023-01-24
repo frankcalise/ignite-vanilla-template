@@ -144,7 +144,7 @@ export function ListItem(props: ListItemProps) {
           Component={LeftComponent}
         />
 
-        <Text {...TextProps} tx={tx} text={text} txOptions={txOptions} style={$textStyles}>
+        <Text {...TextProps} text={text} txOptions={txOptions} style={$textStyles}>
           {children}
         </Text>
 

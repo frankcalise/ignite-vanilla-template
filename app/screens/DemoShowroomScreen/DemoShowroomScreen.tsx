@@ -14,7 +14,6 @@ import {
 import { DrawerLayout, DrawerState } from "react-native-gesture-handler"
 import { useSharedValue, withTiming } from "react-native-reanimated"
 import { ListItem, Screen, Text } from "../../components"
-import { isRTL } from "../../i18n"
 import { DemoTabParamList, DemoTabScreenProps } from "../../navigators/DemoNavigator"
 import { colors, spacing } from "../../theme"
 import { useSafeAreaInsetsStyle } from "../../utils/useSafeAreaInsetsStyle"
@@ -75,7 +74,7 @@ const NativeListItem: FC<DemoListItem> = ({ item, sectionIndex, handleScroll }) 
           key={`section${sectionIndex}-${u}`}
           onPress={() => handleScroll(sectionIndex, index + 1)}
           text={u}
-          rightIcon={isRTL ? "caretLeft" : "caretRight"}
+          rightIcon={"caretRight"}
         />
       ))}
     </View>
@@ -164,7 +163,7 @@ export const DemoShowroomScreen: FC<DemoTabScreenProps<"DemoShowroom">> =
         ref={drawerRef}
         drawerWidth={Platform.select({ default: 326, web: Dimensions.get("window").width * 0.3 })}
         drawerType={"slide"}
-        drawerPosition={isRTL ? "right" : "left"}
+        drawerPosition={"left"}
         overlayColor={open ? colors.palette.overlay20 : "transparent"}
         onDrawerSlide={(drawerProgress) => {
           progress.value = open ? 1 - drawerProgress : drawerProgress
@@ -210,7 +209,7 @@ export const DemoShowroomScreen: FC<DemoTabScreenProps<"DemoShowroom">> =
             renderSectionFooter={() => <View style={$demoUseCasesSpacer} />}
             ListHeaderComponent={
               <View style={$heading}>
-                <Text preset="heading" tx="demoShowroomScreen.jumpStart" />
+                <Text preset="heading" text="demoShowroomScreen.jumpStart" />
               </View>
             }
             onScrollToIndexFailed={scrollToIndexFailed}

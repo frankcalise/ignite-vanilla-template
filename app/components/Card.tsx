@@ -200,7 +200,6 @@ export function Card(props: CardProps) {
               <Text
                 weight="bold"
                 text={heading}
-                tx={headingTx}
                 txOptions={headingTxOptions}
                 {...HeadingTextProps}
                 style={$headingStyle}
@@ -212,7 +211,6 @@ export function Card(props: CardProps) {
               <Text
                 weight="normal"
                 text={content}
-                tx={contentTx}
                 txOptions={contentTxOptions}
                 {...ContentTextProps}
                 style={$contentStyle}
@@ -226,7 +224,6 @@ export function Card(props: CardProps) {
               weight="normal"
               size="xs"
               text={footer}
-              tx={footerTx}
               txOptions={footerTxOptions}
               {...FooterTextProps}
               style={$footerStyle}

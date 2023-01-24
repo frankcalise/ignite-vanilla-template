@@ -77,9 +77,9 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
       contentContainerStyle={$screenContentContainer}
       safeAreaEdges={["top", "bottom"]}
     >
-      <Text testID="login-heading" tx="loginScreen.signIn" preset="heading" style={$signIn} />
-      <Text tx="loginScreen.enterDetails" preset="subheading" style={$enterDetails} />
-      {attemptsCount > 2 && <Text tx="loginScreen.hint" size="sm" weight="light" style={$hint} />}
+      <Text testID="login-heading" text="loginScreen.signIn" preset="heading" style={$signIn} />
+      <Text text="loginScreen.enterDetails" preset="subheading" style={$enterDetails} />
+      {attemptsCount > 2 && <Text text="loginScreen.hint" size="sm" weight="light" style={$hint} />}
 
       <TextField
         value={authEmail}
@@ -89,8 +89,8 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
         autoComplete="email"
         autoCorrect={false}
         keyboardType="email-address"
-        labelTx="loginScreen.emailFieldLabel"
-        placeholderTx="loginScreen.emailFieldPlaceholder"
+        label="loginScreen.emailFieldLabel"
+        placeholder="loginScreen.emailFieldPlaceholder"
         helper={errors?.authEmail}
         status={errors?.authEmail ? "error" : undefined}
         onSubmitEditing={() => authPasswordInput.current?.focus()}
@@ -105,8 +105,8 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
         autoComplete="password"
         autoCorrect={false}
         secureTextEntry={isAuthPasswordHidden}
-        labelTx="loginScreen.passwordFieldLabel"
-        placeholderTx="loginScreen.passwordFieldPlaceholder"
+        label="loginScreen.passwordFieldLabel"
+        placeholder="loginScreen.passwordFieldPlaceholder"
         helper={errors?.authPassword}
         status={errors?.authPassword ? "error" : undefined}
         onSubmitEditing={login}
@@ -115,7 +115,7 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
 
       <Button
         testID="login-button"
-        tx="loginScreen.tapToSignIn"
+        text="loginScreen.tapToSignIn"
         style={$tapButton}
         preset="reversed"
         onPress={login}

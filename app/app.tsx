@@ -9,17 +9,15 @@
  * The app navigation resides in ./app/navigators, so head over there
  * if you're interested in adding screens and navigators.
  */
-import "./i18n"
+// import "./i18n"
 import "./utils/ignoreWarnings"
-import { useFonts } from "expo-font"
 import React from "react"
+// import { Linking } from "react-native"
 import { initialWindowMetrics, SafeAreaProvider } from "react-native-safe-area-context"
-import * as Linking from "expo-linking"
 import { useInitialRootStore } from "./models"
 import { AppNavigator, useNavigationPersistence } from "./navigators"
 import { ErrorBoundary } from "./screens/ErrorScreen/ErrorBoundary"
 import * as storage from "./utils/storage"
-import { customFontsToLoad } from "./theme"
 import { setupReactotron } from "./services/reactotron"
 import Config from "./config"
 
@@ -40,26 +38,27 @@ setupReactotron({
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
 
+// TODO iv RN linking?
 // Web linking configuration
-const prefix = Linking.createURL("/")
-const config = {
-  screens: {
-    Login: {
-      path: "",
-    },
-    Welcome: "welcome",
-    Demo: {
-      screens: {
-        DemoShowroom: {
-          path: "showroom/:queryIndex?/:itemIndex?",
-        },
-        DemoDebug: "debug",
-        DemoPodcastList: "podcast",
-        DemoCommunity: "community",
-      },
-    },
-  },
-}
+// const prefix = Linking.createURL("/")
+// const config = {
+//   screens: {
+//     Login: {
+//       path: "",
+//     },
+//     Welcome: "welcome",
+//     Demo: {
+//       screens: {
+//         DemoShowroom: {
+//           path: "showroom/:queryIndex?/:itemIndex?",
+//         },
+//         DemoDebug: "debug",
+//         DemoPodcastList: "podcast",
+//         DemoCommunity: "community",
+//       },
+//     },
+//   },
+// }
 
 interface AppProps {
   hideSplashScreen: () => Promise<void>
@@ -75,8 +74,6 @@ function App(props: AppProps) {
     onNavigationStateChange,
     isRestored: isNavigationStateRestored,
   } = useNavigationPersistence(storage, NAVIGATION_PERSISTENCE_KEY)
-
-  const [areFontsLoaded] = useFonts(customFontsToLoad)
 
   const { rehydrated } = useInitialRootStore(() => {
     // This runs after the root store has been initialized and rehydrated.
@@ -94,19 +91,20 @@ function App(props: AppProps) {
   // In iOS: application:didFinishLaunchingWithOptions:
   // In Android: https://stackoverflow.com/a/45838109/204044
   // You can replace with your own loading component if you wish.
-  if (!rehydrated || !isNavigationStateRestored || !areFontsLoaded) return null
+  if (!rehydrated || !isNavigationStateRestored) return null
 
-  const linking = {
-    prefixes: [prefix],
-    config,
-  }
+  // TODO iv RN linking?
+  // const linking = {
+  //   prefixes: [prefix],
+  //   config,
+  // }
 
   // otherwise, we're ready to render the app
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <ErrorBoundary catchErrors={Config.catchErrors}>
         <AppNavigator
-          linking={linking}
+          // linking={linking}
           initialState={initialNavigationState}
           onStateChange={onNavigationStateChange}
         />

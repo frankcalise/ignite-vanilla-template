@@ -1,5 +1,4 @@
 import { useScrollToTop } from "@react-navigation/native"
-import { StatusBar, StatusBarProps } from "expo-status-bar"
 import React, { useRef, useState } from "react"
 import {
   KeyboardAvoidingView,
@@ -11,6 +10,8 @@ import {
   StyleProp,
   View,
   ViewStyle,
+  StatusBar,
+  StatusBarProps,
 } from "react-native"
 import { colors } from "../theme"
 import { ExtendedEdge, useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"

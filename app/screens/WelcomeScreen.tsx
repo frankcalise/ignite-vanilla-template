@@ -5,7 +5,6 @@ import {
   Button, // @demo remove-current-line
   Text,
 } from "../components"
-import { isRTL } from "../i18n"
 import { useStores } from "../models" // @demo remove-current-line
 import { AppStackScreenProps } from "../navigators" // @demo remove-current-line
 import { colors, spacing } from "../theme"
@@ -45,20 +44,20 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
         <Text
           testID="welcome-heading"
           style={$welcomeHeading}
-          tx="welcomeScreen.readyForLaunch"
+          text="welcomeScreen.readyForLaunch"
           preset="heading"
         />
-        <Text tx="welcomeScreen.exciting" preset="subheading" />
+        <Text text="welcomeScreen.exciting" preset="subheading" />
         <Image style={$welcomeFace} source={welcomeFace} resizeMode="contain" />
       </View>
 
       <View style={[$bottomContainer, $bottomContainerInsets]}>
-        <Text tx="welcomeScreen.postscript" size="md" />
+        <Text text="welcomeScreen.postscript" size="md" />
         {/* @demo remove-block-start */}
         <Button
           testID="next-screen-button"
           preset="reversed"
-          tx="welcomeScreen.letsGo"
+          text="welcomeScreen.letsGo"
           onPress={goNext}
         />
         {/* @demo remove-block-end */}
@@ -102,7 +101,7 @@ const $welcomeFace: ImageStyle = {
   position: "absolute",
   bottom: -47,
   right: -80,
-  transform: [{ scaleX: isRTL ? -1 : 1 }],
+  transform: [{ scaleX: 1 }],
 }
 
 const $welcomeHeading: TextStyle = {

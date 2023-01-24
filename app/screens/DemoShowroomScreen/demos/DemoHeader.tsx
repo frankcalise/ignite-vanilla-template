@@ -52,7 +52,7 @@ export const DemoHeader: Demo = {
     >
       <Header
         title="Via `leftTx`"
-        leftTx="demoShowroomScreen.demoHeaderTxExample"
+        leftText="demoShowroomScreen.demoHeaderTxExample"
         safeAreaEdges={[]}
       />
       <DemoDivider size={24} />
