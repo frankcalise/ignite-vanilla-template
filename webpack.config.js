@@ -41,12 +41,7 @@ const svgLoaderConfiguration = {
 
 const imageLoaderConfiguration = {
   test: /\.(gif|jpe?g|png|ttf)$/,
-  use: {
-    loader: "url-loader",
-    options: {
-      name: "[name].[ext]",
-    },
-  },
+  type: "asset/inline",
 }
 
 module.exports = {
