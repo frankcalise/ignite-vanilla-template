@@ -70,15 +70,6 @@ interface BaseToggleProps extends Omit<TouchableOpacityProps, "style"> {
    */
   label?: TextProps["text"]
   /**
-   * Label text which is looked up via i18n.
-   */
-  labelTx?: TextProps["tx"]
-  /**
-   * Optional label options to pass to i18n. Useful for interpolation
-   * as well as explicitly setting locale or translation fallbacks.
-   */
-  labelTxOptions?: TextProps["txOptions"]
-  /**
    * Style overrides for label text.
    */
   labelStyle?: StyleProp<TextStyle>
@@ -90,15 +81,6 @@ interface BaseToggleProps extends Omit<TouchableOpacityProps, "style"> {
    * The helper text to display if not using `helperTx`.
    */
   helper?: TextProps["text"]
-  /**
-   * Helper text which is looked up via i18n.
-   */
-  helperTx?: TextProps["tx"]
-  /**
-   * Optional helper options to pass to i18n. Useful for interpolation
-   * as well as explicitly setting locale or translation fallbacks.
-   */
-  helperTxOptions?: TextProps["txOptions"]
   /**
    * Pass any additional props directly to the helper Text component.
    */
@@ -167,8 +149,6 @@ export function Toggle(props: ToggleProps) {
     onValueChange,
     labelPosition = "right",
     helper,
-    helperTx,
-    helperTxOptions,
     HelperTextProps,
     containerStyle: $containerStyleOverride,
     inputWrapperStyle: $inputWrapperStyleOverride,
@@ -195,7 +175,9 @@ export function Toggle(props: ToggleProps) {
   ]
 
   function handlePress(e: GestureResponderEvent) {
-    if (disabled) return
+    if (disabled) {
+      return
+    }
     onValueChange?.(!value)
     onPress?.(e)
   }
@@ -464,7 +446,9 @@ function Switch(props: ToggleInputProps) {
 function SwitchAccessibilityLabel(props: ToggleInputProps & { role: "on" | "off" }) {
   const { on, disabled, status, switchAccessibilityMode, role, innerStyle, detailStyle } = props
 
-  if (!switchAccessibilityMode) return null
+  if (!switchAccessibilityMode) {
+    return null
+  }
 
   const shouldLabelBeVisible = (on && role === "on") || (!on && role === "off")
 
@@ -475,9 +459,15 @@ function SwitchAccessibilityLabel(props: ToggleInputProps & { role: "on" | "off"
   ]
 
   const color = (function () {
-    if (disabled) return colors.palette.neutral600
-    if (status === "error") return colors.error
-    if (!on) return innerStyle?.backgroundColor || colors.palette.secondary500
+    if (disabled) {
+      return colors.palette.neutral600
+    }
+    if (status === "error") {
+      return colors.error
+    }
+    if (!on) {
+      return innerStyle?.backgroundColor || colors.palette.secondary500
+    }
     return detailStyle?.backgroundColor || colors.palette.neutral100
   })()
 
@@ -515,7 +505,9 @@ function FieldLabel(props: BaseToggleProps) {
     labelStyle: $labelStyleOverride,
   } = props
 
-  if (!label && !labelTx && !LabelTextProps?.children) return null
+  if (!label && !labelTx && !LabelTextProps?.children) {
+    return null
+  }
 
   const $labelStyle = [
     $label,

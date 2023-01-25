@@ -14,15 +14,24 @@ export const AuthenticationStoreModel = types
     get validationErrors() {
       return {
         authEmail: (function () {
-          if (store.authEmail.length === 0) return "can't be blank"
-          if (store.authEmail.length < 6) return "must be at least 6 characters"
-          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(store.authEmail))
+          if (store.authEmail.length === 0) {
+            return "can't be blank"
+          }
+          if (store.authEmail.length < 6) {
+            return "must be at least 6 characters"
+          }
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(store.authEmail)) {
             return "must be a valid email address"
+          }
           return ""
         })(),
         authPassword: (function () {
-          if (store.authPassword.length === 0) return "can't be blank"
-          if (store.authPassword.length < 6) return "must be at least 6 characters"
+          if (store.authPassword.length === 0) {
+            return "can't be blank"
+          }
+          if (store.authPassword.length < 6) {
+            return "must be at least 6 characters"
+          }
           return ""
         })(),
       }

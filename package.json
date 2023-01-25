@@ -10,7 +10,7 @@
     "test:watch": "jest --watch",
     "compile": "tsc --noEmit -p . --pretty",
     "format": "prettier --write \"app/**/*.{js,jsx,json,md,ts,tsx}\"",
-    "lint": "eslint index.js app test --fix --ext .js,.ts,.tsx && npm run format",
+    "lint": "eslint index.js app --fix --ext .js,.ts,.tsx",
     "patch": "patch-package",
     "adb": "adb reverse tcp:9090 tcp:9090 && adb reverse tcp:3000 tcp:3000 && adb reverse tcp:9001 tcp:9001 && adb reverse tcp:8081 tcp:8081",
     "postinstall": "node ./bin/postInstall"
@@ -44,7 +44,6 @@
     "@babel/plugin-proposal-optional-catch-binding": "^7.18.6",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
-    "@react-native-community/eslint-config": "^3.0.0",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^29.2.1",
     "@types/react": "^18.0.24",
@@ -148,7 +147,8 @@
       "react-native/no-raw-text": 0,
       "react/no-unescaped-entities": 0,
       "react/prop-types": 0,
-      "space-before-function-paren": 0
+      "space-before-function-paren": 0,
+      "semi": 0
     }
   }
 }

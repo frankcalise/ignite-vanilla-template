@@ -32,12 +32,16 @@ export function useAutoImage(
   const [maxWidth, maxHeight] = dimensions ?? []
 
   useLayoutEffect(() => {
-    if (!remoteUri) return
+    if (!remoteUri) {
+      return
+    }
 
     Image.getSize(remoteUri, (w, h) => setRemoteImageDimensions([w, h]))
   }, [remoteUri])
 
-  if (Number.isNaN(remoteAspectRatio)) return [0, 0]
+  if (Number.isNaN(remoteAspectRatio)) {
+    return [0, 0]
+  }
 
   if (maxWidth && maxHeight) {
     const aspectRatio = Math.min(maxWidth / remoteWidth, maxHeight / remoteHeight)

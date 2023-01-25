@@ -1,7 +1,5 @@
 import { format, parseISO } from "date-fns"
 
-import en from "date-fns/locale/en-US"
-
 type Options = Parameters<typeof format>[2]
 
 // const getLocale = (): Locale => {

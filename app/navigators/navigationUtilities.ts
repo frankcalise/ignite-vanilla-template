@@ -31,7 +31,9 @@ export function getActiveRouteName(state: NavigationState | PartialState<Navigat
   const route = state.routes[state.index]
 
   // Found the active route -- return the name
-  if (!route.state) return route.name
+  if (!route.state) {
+    return route.name
+  }
 
   // Recursive call to deal with nested routers
   return getActiveRouteName(route.state)
@@ -43,7 +45,9 @@ export function getActiveRouteName(state: NavigationState | PartialState<Navigat
  */
 export function useBackButtonHandler(canExit: (routeName: string) => boolean) {
   // ignore if iOS ... no back button!
-  if (Platform.OS === "ios") return
+  if (Platform.OS === "ios") {
+    return
+  }
 
   // The reason we're using a ref here is because we need to be able
   // to update the canExit function without re-setting up all the listeners
@@ -92,9 +96,15 @@ export function useBackButtonHandler(canExit: (routeName: string) => boolean) {
  * based on a config setting and the __DEV__ environment (dev or prod).
  */
 function navigationRestoredDefaultState(persistNavigation: PersistNavigationConfig) {
-  if (persistNavigation === "always") return false
-  if (persistNavigation === "dev" && __DEV__) return false
-  if (persistNavigation === "prod" && !__DEV__) return false
+  if (persistNavigation === "always") {
+    return false
+  }
+  if (persistNavigation === "dev" && __DEV__) {
+    return false
+  }
+  if (persistNavigation === "prod" && !__DEV__) {
+    return false
+  }
 
   // all other cases, disable restoration by returning true
   return true
@@ -133,14 +143,20 @@ export function useNavigationPersistence(storage: any, persistenceKey: string) {
   const restoreState = async () => {
     try {
       const state = await storage.load(persistenceKey)
-      if (state) setInitialNavigationState(state)
+      if (state) {
+        setInitialNavigationState(state)
+      }
     } finally {
-      if (isMounted()) setIsRestored(true)
+      if (isMounted()) {
+        setIsRestored(true)
+      }
     }
   }
 
   useEffect(() => {
-    if (!isRestored) restoreState()
+    if (!isRestored) {
+      restoreState()
+    }
   }, [isRestored])
 
   return { onNavigationStateChange, restoreState, isRestored, initialNavigationState }

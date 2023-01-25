@@ -77,12 +77,10 @@ export const DemoButton: Demo = {
 
       <Button>
         <Text>
-          <Text preset="bold">Nested children - proident veniam.</Text>
-          {` `}
+          <Text preset="bold">Nested children - proident veniam.</Text>{" "}
           <Text preset="default">
             Ullamco cupidatat officia exercitation velit non ullamco nisi..
-          </Text>
-          {` `}
+          </Text>{" "}
           <Text preset="bold">Occaecat aliqua irure proident veniam.</Text>
         </Text>
       </Button>

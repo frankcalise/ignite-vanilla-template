@@ -104,12 +104,10 @@ export const DemoText: Demo = {
 
       <Text>
         <Text>nested children - </Text>
-        <Text preset="bold">Occaecat aliqua irure proident veniam.</Text>
-        {` `}
+        <Text preset="bold">Occaecat aliqua irure proident veniam.</Text>{" "}
         <Text preset="default">
           Ullamco cupidatat officia exercitation velit non ullamco nisi..
-        </Text>
-        {` `}
+        </Text>{" "}
         <Text preset="bold">Occaecat aliqua irure proident veniam.</Text>
       </Text>
     </DemoUseCase>,
@@ -119,13 +117,11 @@ export const DemoText: Demo = {
         <Text style={{ color: colors.error }}>
           Consequat ullamco veniam velit mollit proident excepteur aliquip id culpa ipsum velit sint
           nostrud.
-        </Text>
-        {` `}
+        </Text>{" "}
         <Text style={{ color: colors.palette.neutral100, backgroundColor: colors.error }}>
           Eiusmod occaecat laboris eu ex veniam ipsum adipisicing consectetur. Magna ullamco
           adipisicing tempor adipisicing.
-        </Text>
-        {` `}
+        </Text>{" "}
         <Text
           /* eslint-disable react-native/no-inline-styles */
           style={{

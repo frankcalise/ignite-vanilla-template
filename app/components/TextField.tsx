@@ -122,7 +122,9 @@ export const TextField = forwardRef(function TextField(props: TextFieldProps, re
   ]
 
   function focusInput() {
-    if (disabled) return
+    if (disabled) {
+      return
+    }
 
     input.current?.focus()
   }

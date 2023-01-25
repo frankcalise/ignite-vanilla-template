@@ -14,7 +14,7 @@
 //  * the language code is the suffixed with "-US". i.e. if a device is set to English ("en"),
 //  * if you change to another language and then return to English language code is now "en-US".
 //  */
-// const translations = { ar, en, "en-US": en, ko } 
+// const translations = { ar, en, "en-US": en, ko }
 // i18n.translations = translations
 
 // const translate = memoize(

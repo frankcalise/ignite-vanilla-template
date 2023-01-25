@@ -1,4 +1,5 @@
-/* eslint-disable react/jsx-key, react-native/no-inline-styles */
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable react/jsx-key */
 import React from "react"
 import { TextStyle, View, ViewStyle } from "react-native"
 import { FlatList } from "react-native-gesture-handler"
@@ -9,7 +10,7 @@ import { DemoDivider } from "../DemoDivider"
 import { DemoUseCase } from "../DemoUseCase"
 
 const flatListData =
-  `Tempor Id Ea Aliqua Pariatur Aliquip. Irure Minim Voluptate Consectetur Consequat Sint Esse Proident Irure. Nostrud Elit Veniam Nostrud Excepteur Minim Deserunt Quis Dolore Velit Nulla Irure Voluptate Tempor. Occaecat Amet Laboris Nostrud Qui Do Quis Lorem Ex Elit Fugiat Deserunt. In Pariatur Excepteur Exercitation Ex Incididunt Qui Mollit Dolor Sit Non. Culpa Officia Minim Cillum Exercitation Voluptate Proident Laboris Et Est Reprehenderit Quis Pariatur Nisi`
+  "Tempor Id Ea Aliqua Pariatur Aliquip. Irure Minim Voluptate Consectetur Consequat Sint Esse Proident Irure. Nostrud Elit Veniam Nostrud Excepteur Minim Deserunt Quis Dolore Velit Nulla Irure Voluptate Tempor. Occaecat Amet Laboris Nostrud Qui Do Quis Lorem Ex Elit Fugiat Deserunt. In Pariatur Excepteur Exercitation Ex Incididunt Qui Mollit Dolor Sit Non. Culpa Officia Minim Cillum Exercitation Voluptate Proident Laboris Et Est Reprehenderit Quis Pariatur Nisi"
     .split(".")
     .map((item) => item.trim())
 
@@ -135,8 +136,7 @@ export const DemoListItem: Demo = {
       <ListItem topSeparator>Children - mostrud mollit</ListItem>
       <ListItem topSeparator bottomSeparator>
         <Text>
-          <Text preset="bold">Nested children - proident veniam.</Text>
-          {` `}
+          <Text preset="bold">Nested children - proident veniam.</Text>{" "}
           <Text preset="default">
             Ullamco cupidatat officia exercitation velit non ullamco nisi..
           </Text>

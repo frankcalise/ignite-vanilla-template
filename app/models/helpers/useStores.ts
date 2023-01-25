@@ -67,12 +67,16 @@ export const useInitialRootStore = (callback: () => void | Promise<void>) => {
       setRehydrated(true)
 
       // invoke the callback, if provided
-      if (callback) callback()
+      if (callback) {
+        callback()
+      }
     })()
 
     return () => {
       // cleanup
-      if (_unsubscribe) _unsubscribe()
+      if (_unsubscribe) {
+        _unsubscribe()
+      }
     }
   }, [])
 

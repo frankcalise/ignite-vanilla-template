@@ -37,7 +37,9 @@ export async function setupRootStore(rootStore: RootStore) {
   }
 
   // stop tracking state changes if we've already setup
-  if (_disposer) _disposer()
+  if (_disposer) {
+    _disposer()
+  }
 
   // track changes & save to AsyncStorage
   _disposer = onSnapshot(rootStore, (snapshot) => storage.save(ROOT_STATE_STORAGE_KEY, snapshot))

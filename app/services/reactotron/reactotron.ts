@@ -91,7 +91,9 @@ export function setupReactotron(customConfig: ReactotronConfig = {}) {
   // only run this in dev... metro bundler will ignore this block: 🎉
   if (__DEV__) {
     // only setup once.
-    if (_reactotronIsSetUp) return
+    if (_reactotronIsSetUp) {
+      return
+    }
 
     // merge the passed in config with our default config
     Object.assign(config, customConfig)

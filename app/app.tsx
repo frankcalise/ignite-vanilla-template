@@ -90,7 +90,9 @@ function App() {
   // In iOS: application:didFinishLaunchingWithOptions:
   // In Android: https://stackoverflow.com/a/45838109/204044
   // You can replace with your own loading component if you wish.
-  if (!rehydrated || !isNavigationStateRestored) return null
+  if (!rehydrated || !isNavigationStateRestored) {
+    return null
+  }
 
   // TODO iv RN linking?
   // const linking = {
