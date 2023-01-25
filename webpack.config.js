@@ -40,8 +40,13 @@ const svgLoaderConfiguration = {
 }
 
 const imageLoaderConfiguration = {
-  test: /\.(gif|jpe?g|png|ttf)$/,
+  test: /\.(gif|jpe?g|png)$/,
   type: "asset/inline",
+}
+
+const ttfLoaderConfiguration = {
+  test: /\.ttf$/,
+  type: "asset/resource",
 }
 
 module.exports = {
@@ -58,7 +63,12 @@ module.exports = {
     },
   },
   module: {
-    rules: [babelLoaderConfiguration, imageLoaderConfiguration, svgLoaderConfiguration],
+    rules: [
+      babelLoaderConfiguration,
+      imageLoaderConfiguration,
+      svgLoaderConfiguration,
+      ttfLoaderConfiguration,
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
