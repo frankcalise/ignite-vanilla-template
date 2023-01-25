@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "allowJs": false,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "jsx": "react-native",
@@ -14,9 +14,10 @@
     "target": "esnext",
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmitOnError": true
   },
   "exclude": ["node_modules"],
-  "include": ["index.js", "app", "test"],
+  "include": ["app", "test"],
   "extends": "@tsconfig/react-native/tsconfig.json"
 }

@@ -208,7 +208,7 @@ export function Toggle(props: ToggleProps) {
         {labelPosition === "right" && <FieldLabel {...props} labelPosition={labelPosition} />}
       </View>
 
-      {!!(helper || helperTx) && (
+      {!!helper && (
         <Text preset="formHelper" text={helper} {...HelperTextProps} style={$helperStyles} />
       )}
     </Wrapper>
