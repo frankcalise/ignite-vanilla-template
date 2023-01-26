@@ -48,7 +48,9 @@ export function DemoNavigator() {
         component={DemoShowroomScreen}
         options={{
           tabBarLabel: "Components",
-          tabBarIcon: ({ focused }) => <Icon icon="components" color={focused && colors.tint} />,
+          tabBarIcon: ({ focused }) => (
+            <Icon size={30} icon="components" color={focused && colors.tint} />
+          ),
         }}
       />
 
@@ -57,7 +59,9 @@ export function DemoNavigator() {
         component={DemoCommunityScreen}
         options={{
           tabBarLabel: "Community",
-          tabBarIcon: ({ focused }) => <Icon icon="community" color={focused && colors.tint} />,
+          tabBarIcon: ({ focused }) => (
+            <Icon size={30} icon="community" color={focused && colors.tint} />
+          ),
         }}
       />
 
@@ -66,7 +70,9 @@ export function DemoNavigator() {
         component={DemoPodcastListScreen}
         options={{
           tabBarLabel: "Podcast",
-          tabBarIcon: ({ focused }) => <Icon icon="podcast" color={focused && colors.tint} />,
+          tabBarIcon: ({ focused }) => (
+            <Icon size={30} icon="podcast" color={focused && colors.tint} />
+          ),
         }}
       />
 
@@ -75,7 +81,9 @@ export function DemoNavigator() {
         component={DemoDebugScreen}
         options={{
           tabBarLabel: "Debug",
-          tabBarIcon: ({ focused }) => <Icon icon="debug" color={focused && colors.tint} />,
+          tabBarIcon: ({ focused }) => (
+            <Icon size={30} icon="debug" color={focused && colors.tint} />
+          ),
         }}
       />
     </Tab.Navigator>

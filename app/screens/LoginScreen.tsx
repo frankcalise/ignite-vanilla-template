@@ -56,6 +56,7 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
       function PasswordRightAccessory(props: TextFieldAccessoryProps) {
         return (
           <Icon
+            size={20}
             icon={isAuthPasswordHidden ? "view" : "hidden"}
             color={colors.palette.neutral800}
             containerStyle={props.style}
