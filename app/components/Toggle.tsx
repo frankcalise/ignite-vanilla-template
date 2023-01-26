@@ -208,7 +208,7 @@ export function Toggle(props: ToggleProps) {
         {labelPosition === "right" && <FieldLabel {...props} labelPosition={labelPosition} />}
       </View>
 
-      {!!(helper || helperTx) && (
+      {!!helper && (
         <Text preset="formHelper" text={helper} {...HelperTextProps} style={$helperStyles} />
       )}
     </Wrapper>
@@ -495,17 +495,9 @@ function SwitchAccessibilityLabel(props: ToggleInputProps & { role: "on" | "off"
 }
 
 function FieldLabel(props: BaseToggleProps) {
-  const {
-    status,
-    label,
-    labelTx,
-    labelTxOptions,
-    LabelTextProps,
-    labelPosition,
-    labelStyle: $labelStyleOverride,
-  } = props
+  const { status, label, LabelTextProps, labelPosition, labelStyle: $labelStyleOverride } = props
 
-  if (!label && !labelTx && !LabelTextProps?.children) {
+  if (!label && !LabelTextProps?.children) {
     return null
   }
 
@@ -518,15 +510,7 @@ function FieldLabel(props: BaseToggleProps) {
     LabelTextProps?.style,
   ]
 
-  return (
-    <Text
-      preset="formLabel"
-      text={label}
-      txOptions={labelTxOptions}
-      {...LabelTextProps}
-      style={$labelStyle}
-    />
-  )
+  return <Text preset="formLabel" text={label} {...LabelTextProps} style={$labelStyle} />
 }
 
 const $inputWrapper: ViewStyle = {

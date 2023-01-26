@@ -63,11 +63,6 @@ export interface HeaderProps {
    */
   LeftActionComponent?: ReactElement
   /**
-   * Optional options to pass to i18n. Useful for interpolation
-   * as well as explicitly setting locale or translation fallbacks.
-   */
-  leftTxOptions?: TextProps["txOptions"]
-  /**
    * What happens when you press the left icon or text action.
    */
   onLeftPress?: TouchableOpacityProps["onPress"]
