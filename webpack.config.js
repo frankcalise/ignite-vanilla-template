@@ -4,7 +4,7 @@ const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 const appDirectory = path.resolve(__dirname)
-const { presets, plugins } = require(`${appDirectory}/babel.config.js`)
+const { presets } = require(`${appDirectory}/babel.config.js`)
 
 const compileNodeModules = [
   // Add every react-native package that needs compiling
@@ -44,9 +44,14 @@ const imageLoaderConfiguration = {
   type: "asset/inline",
 }
 
-const ttfLoaderConfiguration = {
-  test: /\.ttf$/,
+const fontLoaderConfiguration = {
+  test: /\.(woff(2)?|ttf|eot|otf)$/,
   type: "asset/resource",
+}
+
+const cssLoaderConfiguration = {
+  test: /\.css$/,
+  use: ["style-loader", "css-loader"],
 }
 
 module.exports = {
@@ -57,7 +62,8 @@ module.exports = {
     filename: "rnw.bundle.js",
   },
   resolve: {
-    extensions: [".web.tsx", ".web.ts", ".tsx", ".ts", ".web.js", ".js"],
+    // web extension order is important, must come first
+    extensions: [".web.tsx", ".web.ts", ".web.js", ".tsx", ".ts", ".js"],
     alias: {
       "react-native$": "react-native-web",
     },
@@ -67,7 +73,8 @@ module.exports = {
       babelLoaderConfiguration,
       imageLoaderConfiguration,
       svgLoaderConfiguration,
-      ttfLoaderConfiguration,
+      fontLoaderConfiguration,
+      cssLoaderConfiguration,
     ],
   },
   plugins: [
