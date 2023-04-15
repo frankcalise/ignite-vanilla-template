@@ -235,10 +235,12 @@ const $screenContainer: ViewStyle = {
 
 const $drawer: ViewStyle = {
   flex: 1,
+  backgroundColor: colors.background,
 }
 
 const $flatListContentContainer: ViewStyle = {
   paddingHorizontal: spacing.large,
+  backgroundColor: colors.background,
 }
 
 const $sectionListContentContainer: ViewStyle = {
@@ -258,6 +260,7 @@ const $logoContainer: ViewStyle = {
   alignSelf: "flex-start",
   height: 56,
   paddingHorizontal: spacing.large,
+  backgroundColor: colors.background,
 }
 
 const $menuContainer: ViewStyle = {
