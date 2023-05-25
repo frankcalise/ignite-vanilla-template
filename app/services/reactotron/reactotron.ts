@@ -46,7 +46,7 @@ declare global {
 
 // in dev, we attach Reactotron, in prod we attach a interface-compatible mock.
 if (__DEV__) {
-  console.tron = Reactotron // attach reactotron to `console.tron`
+  // console.tron = Reactotron // attach reactotron to `console.tron`
 } else {
   // attach a mock so if things sneak by our __DEV__ guards, we won't crash.
   console.tron = fakeReactotron

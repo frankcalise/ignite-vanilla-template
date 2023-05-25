@@ -61,7 +61,7 @@ export const useInitialRootStore = (callback: () => void | Promise<void>) => {
       _unsubscribe = unsubscribe
 
       // reactotron integration with the MST root store (DEV only)
-      setReactotronRootStore(rootStore, restoredState)
+      // setReactotronRootStore(rootStore, restoredState)
 
       // let the app know we've finished rehydrating
       setRehydrated(true)

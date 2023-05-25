@@ -129,7 +129,7 @@ export function useNavigationPersistence(storage: any, persistenceKey: string) {
     if (previousRouteName !== currentRouteName) {
       // track screens.
       if (__DEV__) {
-        console.tron.log(currentRouteName)
+        // console.tron.log(currentRouteName)
       }
     }
 

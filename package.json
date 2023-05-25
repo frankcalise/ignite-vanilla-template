@@ -15,14 +15,14 @@
     "adb": "adb reverse tcp:9090 tcp:9090 && adb reverse tcp:3000 tcp:3000 && adb reverse tcp:9001 tcp:9001 && adb reverse tcp:8081 tcp:8081",
     "postinstall": "node ./bin/postInstall",
     "web": "webpack serve --mode=development --config webpack.config.js --hot",
-    "build:web": "webpack --mode production --config webpack.config.js --hot"
+    "build:web": "webpack --mode production --config webpack.config.js --hot",
+    "windows": "react-native run-windows"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.11",
     "@react-native-masked-view/masked-view": "^0.2.8",
     "@react-navigation/bottom-tabs": "^6.5.3",
     "@react-navigation/native": "^6.1.2",
-    "@react-navigation/native-stack": "^6.9.8",
     "@react-navigation/stack": "^6.3.11",
     "apisauce": "^2.1.6",
     "date-fns": "^2.29.3",
@@ -36,8 +36,8 @@
     "react-native-reanimated": "^3.1.0",
     "react-native-safe-area-context": "^4.5.0",
     "react-native-screens": "^3.19.0",
-    "react-native-svg": "^13.7.0",
     "react-native-web": "^0.18.11",
+    "react-native-windows": "0.71.14",
     "reactotron-mst": "^3.1.4",
     "reactotron-react-js": "^3.3.8",
     "reactotron-react-native": "^5.0.3"
@@ -75,6 +75,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.2.1",
+    "metro-config": "^0.73.9",
     "metro-react-native-babel-preset": "0.73.7",
     "patch-package": "^6.5.1",
     "postinstall-prepare": "^2.0.0",
@@ -181,7 +182,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }, 
+  },
   "engines": {
     "node": ">= 16.0.0"
   }
