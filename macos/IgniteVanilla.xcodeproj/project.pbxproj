@@ -17,6 +17,11 @@
 		514201552437B4B40078DB4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514201532437B4B40078DB4F /* Main.storyboard */; };
 		514201582437B4B40078DB4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 514201572437B4B40078DB4F /* main.m */; };
 		5A057368E2B36095C2817831 /* libPods-IgniteVanilla-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC76F75829ABEE6E15201843 /* libPods-IgniteVanilla-iOS.a */; };
+		6558B1442A1BC1960054C0F8 /* SpaceGrotesk-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6558B13F2A1BC1960054C0F8 /* SpaceGrotesk-Medium.ttf */; };
+		6558B1452A1BC1960054C0F8 /* SpaceGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6558B1402A1BC1960054C0F8 /* SpaceGrotesk-Regular.ttf */; };
+		6558B1462A1BC1960054C0F8 /* SpaceGrotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6558B1412A1BC1960054C0F8 /* SpaceGrotesk-Light.ttf */; };
+		6558B1472A1BC1960054C0F8 /* SpaceGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6558B1422A1BC1960054C0F8 /* SpaceGrotesk-Bold.ttf */; };
+		6558B1482A1BC1960054C0F8 /* SpaceGrotesk-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6558B1432A1BC1960054C0F8 /* SpaceGrotesk-SemiBold.ttf */; };
 		A03524137E0239016F0AD9B5 /* libPods-IgniteVanilla-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 214FA13A9F9231BEA3AB8EC6 /* libPods-IgniteVanilla-macOS.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +49,11 @@
 		514201562437B4B40078DB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514201572437B4B40078DB4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		514201592437B4B40078DB4F /* IgniteVanilla.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IgniteVanilla.entitlements; sourceTree = "<group>"; };
+		6558B13F2A1BC1960054C0F8 /* SpaceGrotesk-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SpaceGrotesk-Medium.ttf"; path = "../assets/fonts/SpaceGrotesk-Medium.ttf"; sourceTree = "<group>"; };
+		6558B1402A1BC1960054C0F8 /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SpaceGrotesk-Regular.ttf"; path = "../assets/fonts/SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; };
+		6558B1412A1BC1960054C0F8 /* SpaceGrotesk-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SpaceGrotesk-Light.ttf"; path = "../assets/fonts/SpaceGrotesk-Light.ttf"; sourceTree = "<group>"; };
+		6558B1422A1BC1960054C0F8 /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SpaceGrotesk-Bold.ttf"; path = "../assets/fonts/SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; };
+		6558B1432A1BC1960054C0F8 /* SpaceGrotesk-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SpaceGrotesk-SemiBold.ttf"; path = "../assets/fonts/SpaceGrotesk-SemiBold.ttf"; sourceTree = "<group>"; };
 		9D32DFD059D5DB6DDEF38881 /* Pods-Shared-IgniteVanilla-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-IgniteVanilla-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Shared-IgniteVanilla-iOS/Pods-Shared-IgniteVanilla-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A82DFB63B157C65E5D698CA2 /* Pods-Shared-IgniteVanilla-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-IgniteVanilla-iOS.release.xcconfig"; path = "Target Support Files/Pods-Shared-IgniteVanilla-iOS/Pods-Shared-IgniteVanilla-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		AD0C41A2E710237A8CAF0CE1 /* Pods-IgniteVanilla-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgniteVanilla-macOS.debug.xcconfig"; path = "Target Support Files/Pods-IgniteVanilla-macOS/Pods-IgniteVanilla-macOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +141,18 @@
 			path = "IgniteVanilla-macOS";
 			sourceTree = "<group>";
 		};
+		6558B12C2A1BB66F0054C0F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6558B1422A1BC1960054C0F8 /* SpaceGrotesk-Bold.ttf */,
+				6558B1412A1BC1960054C0F8 /* SpaceGrotesk-Light.ttf */,
+				6558B13F2A1BC1960054C0F8 /* SpaceGrotesk-Medium.ttf */,
+				6558B1402A1BC1960054C0F8 /* SpaceGrotesk-Regular.ttf */,
+				6558B1432A1BC1960054C0F8 /* SpaceGrotesk-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +163,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6558B12C2A1BB66F0054C0F8 /* Resources */,
 				5142014A2437B4B30078DB4F /* IgniteVanilla-macOS */,
 				13B07FAE1A68108700A75B9A /* IgniteVanilla-iOS */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -258,8 +281,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6558B1472A1BC1960054C0F8 /* SpaceGrotesk-Bold.ttf in Resources */,
 				514201522437B4B40078DB4F /* Assets.xcassets in Resources */,
 				514201552437B4B40078DB4F /* Main.storyboard in Resources */,
+				6558B1462A1BC1960054C0F8 /* SpaceGrotesk-Light.ttf in Resources */,
+				6558B1452A1BC1960054C0F8 /* SpaceGrotesk-Regular.ttf in Resources */,
+				6558B1482A1BC1960054C0F8 /* SpaceGrotesk-SemiBold.ttf in Resources */,
+				6558B1442A1BC1960054C0F8 /* SpaceGrotesk-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

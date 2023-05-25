@@ -12,7 +12,7 @@ import {
   View,
   ViewStyle,
 } from "react-native"
-import Animated, { useAnimatedStyle, withTiming } from "react-native-reanimated"
+// import Animated, { useAnimatedStyle, withTiming } from "react-native-reanimated"
 import { colors, spacing } from "../theme"
 import { iconRegistry, IconTypes } from "./Icon"
 import { Text, TextProps } from "./Text"
@@ -265,19 +265,19 @@ function Checkbox(props: ToggleInputProps) {
         $outerStyleOverride,
       ]}
     >
-      <Animated.View
+      <View
         style={[
           $checkboxInner,
           { backgroundColor: onBackgroundColor },
           $innerStyleOverride,
-          useAnimatedStyle(() => ({ opacity: withTiming(on ? 1 : 0) }), [on]),
+          // useAnimatedStyle(() => ({ opacity: withTiming(on ? 1 : 0) }), [on]),
         ]}
       >
         <Image
           source={iconRegistry[checkboxIcon] || iconRegistry.check}
           style={[$checkboxDetail, { tintColor: iconTintColor }, $detailStyleOverride]}
         />
-      </Animated.View>
+      </View>
     </View>
   )
 }
@@ -325,18 +325,18 @@ function Radio(props: ToggleInputProps) {
         $outerStyleOverride,
       ]}
     >
-      <Animated.View
+      <View
         style={[
           $radioInner,
           { backgroundColor: onBackgroundColor },
           $innerStyleOverride,
-          useAnimatedStyle(() => ({ opacity: withTiming(on ? 1 : 0) }), [on]),
+          // useAnimatedStyle(() => ({ opacity: withTiming(on ? 1 : 0) }), [on]),
         ]}
       >
         <View
           style={[$radioDetail, { backgroundColor: dotBackgroundColor }, $detailStyleOverride]}
         />
-      </Animated.View>
+      </View>
     </View>
   )
 }
@@ -391,24 +391,24 @@ function Switch(props: ToggleInputProps) {
     }
   })()
 
-  const $animatedSwitchKnob = useAnimatedStyle(() => {
-    const offsetLeft = ($innerStyleOverride?.paddingStart ||
-      $innerStyleOverride?.paddingLeft ||
-      $switchInner?.paddingStart ||
-      $switchInner?.paddingLeft ||
-      0) as number
+  // const $animatedSwitchKnob = useAnimatedStyle(() => {
+  //   const offsetLeft = ($innerStyleOverride?.paddingStart ||
+  //     $innerStyleOverride?.paddingLeft ||
+  //     $switchInner?.paddingStart ||
+  //     $switchInner?.paddingLeft ||
+  //     0) as number
 
-    const offsetRight = ($innerStyleOverride?.paddingEnd ||
-      $innerStyleOverride?.paddingRight ||
-      $switchInner?.paddingEnd ||
-      $switchInner?.paddingRight ||
-      0) as number
+  //   const offsetRight = ($innerStyleOverride?.paddingEnd ||
+  //     $innerStyleOverride?.paddingRight ||
+  //     $switchInner?.paddingEnd ||
+  //     $switchInner?.paddingRight ||
+  //     0) as number
 
-    const start = withTiming(on ? "100%" : "0%")
-    const marginStart = withTiming(on ? -(knobWidth || 0) - offsetRight : 0 + offsetLeft)
+  //   const start = withTiming(on ? "100%" : "0%")
+  //   const marginStart = withTiming(on ? -(knobWidth || 0) - offsetRight : 0 + offsetLeft)
 
-    return { start, marginStart }
-  }, [on, knobWidth])
+  //   return { start, marginStart }
+  // }, [on, knobWidth])
 
   return (
     <View
@@ -418,23 +418,23 @@ function Switch(props: ToggleInputProps) {
         $outerStyleOverride,
       ]}
     >
-      <Animated.View
+      <View
         style={[
           $switchInner,
           { backgroundColor: onBackgroundColor },
           $innerStyleOverride,
-          useAnimatedStyle(() => ({ opacity: withTiming(on ? 1 : 0) }), [on]),
+          // useAnimatedStyle(() => ({ opacity: withTiming(on ? 1 : 0) }), [on]),
         ]}
       />
 
       <SwitchAccessibilityLabel {...props} role="on" />
       <SwitchAccessibilityLabel {...props} role="off" />
 
-      <Animated.View
+      <View
         style={[
           $switchDetail,
           $detailStyleOverride,
-          $animatedSwitchKnob,
+          // $animatedSwitchKnob,
           { width: knobWidth, height: knobHeight },
           { backgroundColor: knobBackgroundColor },
         ]}
